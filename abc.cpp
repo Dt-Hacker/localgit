@@ -78,6 +78,14 @@ void dfs(vector<vector<ll>> &adj, vector<bool> &visited, ll s) {
 
 /*
 Git commands
+Branches 
+
+git branch 
+git branch -M main(rename)
+git checkout <Branch name> (change branch)
+git checkout -b feature1 (new branch)
+git branch -d branch-name (delete)
+
 */
 
 int main() {
