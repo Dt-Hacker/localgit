@@ -86,6 +86,11 @@ git checkout <Branch name> (change branch)
 git checkout -b feature1 (new branch)
 git branch -d branch-name (delete)
 
+Merging of the branch
+git diff <branch name>(to find the differnce between the branches)
+git merge <branch name>
+Using github 
+We make pull request 
 */
 
 int main() {
