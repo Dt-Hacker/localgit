@@ -16,13 +16,16 @@ using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statisti
 const ll mod = 1e9 + 7;
 const ll mod2 = 998244353;
 
-ll gcd(ll a, ll b) {
+ll gcd(ll a, ll b)
+{
     return b ? gcd(b, a % b) : a;
 }
 
-ll pow(ll a, ll b) {
+ll pow(ll a, ll b)
+{
     ll ans = 1;
-    while (b) {
+    while (b)
+    {
         if (b & 1)
             ans *= a;
         b >>= 1;
@@ -31,9 +34,11 @@ ll pow(ll a, ll b) {
     return ans;
 }
 
-ll pow(ll a, ll b, ll c) {
+ll pow(ll a, ll b, ll c)
+{
     ll ans = 1;
-    while (b) {
+    while (b)
+    {
         if (b & 1)
             ans = (ans * a) % c;
         b >>= 1;
@@ -42,33 +47,40 @@ ll pow(ll a, ll b, ll c) {
     return ans;
 }
 
-vector<ll> seiveoferasthones(ll n) {
+vector<ll> seiveoferasthones(ll n)
+{
     vector<bool> prime(n + 1, true);
     prime[0] = false;
     prime[1] = false;
-    for (int i = 2; i * i <= n; i++) {
-        if (prime[i]) {
-            for (int j = i * i; j <= n; j += i) {
+    for (int i = 2; i * i <= n; i++)
+    {
+        if (prime[i])
+        {
+            for (int j = i * i; j <= n; j += i)
+            {
                 prime[j] = false;
             }
         }
     }
     vector<ll> primes;
-    for (ll i = 2; i <= n; i++) {
+    for (ll i = 2; i <= n; i++)
+    {
         if (prime[i])
             primes.push_back(i);
     }
     return primes;
 }
 
-void check(bool b) {
+void check(bool b)
+{
     if (b)
         cout << "Yes\n";
     else
         cout << "No\n";
 }
 
-void dfs(vector<vector<ll>> &adj, vector<bool> &visited, ll s) {
+void dfs(vector<vector<ll>> &adj, vector<bool> &visited, ll s)
+{
     if (visited[s])
         return;
     visited[s] = true;
@@ -78,9 +90,15 @@ void dfs(vector<vector<ll>> &adj, vector<bool> &visited, ll s) {
 
 /*
 Git commands
+Merging of the branch
+git diff <branch name>(to find the differnce between the branches)
+git merge <branch name>
+Using github
+We make pull request
 */
 
-int main() {
+int main()
+{
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
@@ -90,8 +108,8 @@ int main() {
 #endif
     int t;
     cin >> t;
-    while (t--) {
-        
+    while (t--)
+    {
     }
     return 0;
 }
